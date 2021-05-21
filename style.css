@@ -59,3 +59,75 @@ section::before {
     z-index: 10;
     border-radius: 10px;
 }
+
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent .number h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.percent .number h2 span {
+    font-size: 24px;
+}
+
+.text {
+    position: absolute;
+    bottom: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 30px 20px 10px;
+    background: #f00;
+    border-radius: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    pointer-events: none;
+    transition: bottom 0.5s, z-index 0s, transform 0.5s, padding 0.5s;
+    transition-delay: 0s, 0.5s, 0s, 0.5s;
+    color: #fff;
+}
+
+.card:hover .text {
+    transition-delay: 0s, 0.5s, 0.5s, 0s;
+    bottom: -70px;
+    z-index: 11;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 10px 20px 10px;
+}
+
+.card:nth-child(1) .text {
+    background: #ff0461;
+}
+.card:nth-child(2) .text {
+    background: #2bd2ff;
+}
+.card:nth-child(3) .text {
+    background: #18d539;
+}
+
+svg {
+    display: none;
+}
+
