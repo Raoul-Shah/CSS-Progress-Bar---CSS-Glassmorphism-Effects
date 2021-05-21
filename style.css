@@ -128,6 +128,35 @@ section::before {
 }
 
 svg {
-    display: none;
+    position: relative;
+    width: 150px;
+    height: 150px;
 }
 
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: rgba(255, 255, 255, 0.05);
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+}
+
+svg circle:nth-child(2) {
+    stroke: #fff;
+    stroke-dasharray: 440px; 
+    stroke-dashoffset: 440px;
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 88) / 100);
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 75) / 100);
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440px - (440px * 62) / 100);
+}
